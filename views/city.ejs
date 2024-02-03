@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="container-f">
+        <div class="city">
+            <h1><%=data.city + ", " + data.country %></h1>
+            <h2>weather now:</h2>
+        </div>
+        <br />
+        <br />
+        <div class="container-g">
+            <div class="item-1 f">
+                <img src="https://openweathermap.org/img/w/<%=data.icon%>.png">
+                <h1><%=Math.round(data.temp)%>°C</h1>
+                <h2><%=data.weather%></h2>
+                <p><%=data.description%></p>
+            </div>
+            <div class="item-2">
+                <h3>Feels like:</h3>
+                <h2><%=Math.round(data.feels_like)%>°C</h2>
+            </div>
+            <div class="item-3">
+                <h3>Wind Speed:</h3>
+                <h2><%=data.wind_speed%> m/s</h2>
+            </div>
+            <div class="item-4">
+                <h3>Visibility:</h3>
+                <h2><%=Math.round(data.visibility / 1000)%> km</h2>
+            </div>
+            <div class="item-5">
+                <h3>Humidity:</h3>
+                <h2><%=data.humidity%> %</h2>
+            </div>
+            <div class="item-6">
+                <h3>Sunrise:</h3>
+                <h2><%
+                    let unix_timestamp = data.sunrise;
+                    
+                    // Create a new JavaScript Date object based on the timestamp
+                    // multiplied by 1000 so that the argument is in milliseconds, not seconds
+                    var date = new Date(unix_timestamp * 1000);
+                    
+                    // Hours part from the timestamp
+                    var hours = date.getHours();
+                    
+                    // Minutes part from the timestamp
+                    var minutes = "0" + (date.getMinutes() - 1);
+                    
+                    // Will display time in 10:30:23 format
+                    var formattedTime = hours + ':' + minutes.substr(-2);%>
+                    <%=formattedTime%>
+                </h2>
+            </div>
+            <div class="item-7">
+                <h3>Sunset:</h3>
+                <h2><%
+                    let unix_timestamp2 = data.sunset;
+                    
+                    // Create a new JavaScript Date object based on the timestamp
+                    // multiplied by 1000 so that the argument is in milliseconds, not seconds
+                    var date2 = new Date(unix_timestamp2 * 1000);
+                    
+                    // Hours part from the timestamp
+                    var hours2 = date2.getHours();
+                    
+                    // Minutes part from the timestamp
+                    var minutes2 = "0" + (date2.getMinutes() + 1);
+                    
+                    // Will display time in 10:30:23 format
+                    var formattedTime2 = hours2 + ':' + minutes2.substr(-2);%>
+                    <%=formattedTime2%></h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
