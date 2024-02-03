@@ -22,15 +22,15 @@ Use a Ninja API for geocoding and the OpenWeatherMap API to build a website that
 Express.js, Node.js, Axios and Public APIs
 
 
-### Website Preview:
+## Website Preview:
 
-#### Home Page:
+### Home Page:
 <img width="1509" alt="Screenshot 2024-02-03 at 15 08 23" src="https://github.com/matyborsos/Wheather-App-using-Public-APi/assets/122999210/98211db6-573b-4f31-a7d1-218126d36eec">
 
-#### Search feature:
+### Search feature:
 <img width="597" alt="Screenshot 2024-02-03 at 15 08 49" src="https://github.com/matyborsos/Wheather-App-using-Public-APi/assets/122999210/1520caf4-7237-458f-a913-822e94688e7a">
 
-#### Wheather Prediction examples in 2 cities: Berlin and Rome:
+### Wheather Prediction examples in 2 cities: Berlin and Rome:
 <img width="1475" alt="Screenshot 2024-02-03 at 15 09 40" src="https://github.com/matyborsos/Wheather-App-using-Public-APi/assets/122999210/615c6214-e1bc-434a-9deb-ed34d5888693">
 
 <img width="1491" alt="Screenshot 2024-02-03 at 15 08 40" src="https://github.com/matyborsos/Wheather-App-using-Public-APi/assets/122999210/61987055-04b2-49b1-812c-44baa3af308e">
